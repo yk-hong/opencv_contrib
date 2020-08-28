@@ -209,6 +209,9 @@ Ptr<VideoReader> cv::cudacodec::createVideoReader(const String& filename)
         videoSource.reset(new CuvidVideoSource(filename));
     }
 
+    if (videoSource->format().codec == Codec::HEVC)
+        videoSource.reset(new CuvidVideoSource(filename));
+
     return makePtr<VideoReaderImpl>(videoSource);
 }
 

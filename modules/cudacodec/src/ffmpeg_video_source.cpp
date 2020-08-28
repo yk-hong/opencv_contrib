@@ -82,6 +82,10 @@ Codec FourccToCodec(int codec)
     case CV_FOURCC_MACRO('a', 'v', 'c', '1'): return H264;
     case CV_FOURCC_MACRO('H', '2', '6', '5'): // fallthru
     case CV_FOURCC_MACRO('h', '2', '6', '5'): // fallthru
+    case CV_FOURCC_MACRO('H', 'E', 'V', '1'): // fallthru
+    case CV_FOURCC_MACRO('h', 'e', 'v', '1'): // fallthru
+    case CV_FOURCC_MACRO('H', 'V', 'C', '1'): // fallthru
+    case CV_FOURCC_MACRO('h', 'v', 'c', '1'): // fallthru
     case CV_FOURCC_MACRO('h', 'e', 'v', 'c'): return HEVC;
     case CV_FOURCC_MACRO('M', 'J', 'P', 'G'): return JPEG;
     case CV_FOURCC_MACRO('V', 'P', '8', '0'): return VP8;
